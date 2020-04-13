@@ -1,56 +1,39 @@
+
 <!DOCTYPE html>
 <html>
 
 <head>
-    <meta charset="UTF-8">
-    <title>蛙跳视频</title>
+  <meta charset="UTF-8">
+  <title>蛙跳视频</title>
 
 <body>
-    <p align="center">
-        <font size="10" face="Verdana">  
-            苹果用户请点击下方链接进行下载安装
-        </font>
-    </p>
-    <p align="center">
-        <font size="10" face="Verdana">   
-            <a href="https://apps.apple.com/cn/app/%E8%9B%99%E8%B7%B3%E8%A7%86%E9%A2%91/id1478578509">AppStore下载链接</a>
-        </font>
-    </p>
+<p align="center">
+  <font size="10" face="Verdana">
+    苹果用户请点击下方链接进行下载安装
+  </font>
+</p>
+<p align="center">
+  <font size="10" face="Verdana">
+    <a href="https://apps.apple.com/cn/app/%E8%9B%99%E8%B7%B3%E8%A7%86%E9%A2%91/id1478578509">AppStore下载链接</a>
+  </font>
+</p>
 </body>
 <script>
-    var u = navigator.userAgent, app = navigator.appVersion;
-    var isXiaomi = u.indexOf('XiaoMi') > -1;
-    var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1;
-    var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
-    if (isAndroid) {
-        // alert("Android系统");
-        window.open("https://a.app.qq.com/o/simple.jsp?pkgname=com.watiao.yishuproject");
-    } else if (isIOS) {
-        if (isXiaomi) {
-            // alert("您的浏览器标识为iPhone，请前往设置：“设置”->“高级设置”->“浏览器标识=默认”");
-            window.open("https://a.app.qq.com/o/simple.jsp?pkgname=com.watiao.yishuproject");
-        } else {
-            window.open("https://apps.apple.com/cn/app/%E8%9B%99%E8%B7%B3%E8%A7%86%E9%A2%91/id1478578509");
-        }
+  var u = navigator.userAgent, app = navigator.appVersion;
+  var isXiaomi = u.indexOf('XiaoMi') > -1;
+  var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Linux') > -1;
+  var isIOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/);
+  if (isAndroid) {
+    // alert("Android系统");
+    window.open("https://a.app.qq.com/o/simple.jsp?pkgname=com.watiao.yishuproject");
+  } else if (isIOS) {
+    if (isXiaomi) {
+      // alert("您的浏览器标识为iPhone，请前往设置：“设置”->“高级设置”->“浏览器标识=默认”");
+      window.open("https://a.app.qq.com/o/simple.jsp?pkgname=com.watiao.yishuproject");
+    } else {
+      window.location.href="https://apps.apple.com/cn/app/%E8%9B%99%E8%B7%B3%E8%A7%86%E9%A2%91/id1478578509"
     }
-</script>
-<script type="text/javascript">
-    window.onload = function() {
-        isWeixinBrowser();
   }
-    //判断是否微信浏览器
-   function isWeixinBrowser() {  
-        var ua = navigator.userAgent.toLowerCase();  
-        var result = (/micromessenger/.test(ua)) ? true : false;
-        if (result) {
-           console.log('你正在访问微信浏览器');
-       }
-       else {
-           console.log('你访问的不是微信浏览器');
-       }
-       return result;
-   }  
-</script>
 </head>
 
 </html>
